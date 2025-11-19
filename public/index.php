@@ -1,4 +1,5 @@
 <?php
+
 /**
  * ------------------------------------------------------------------------
  *  WEB250 MVC — Front Controller (with router and subfolder support)
@@ -77,7 +78,9 @@ $router->get('/home', fn() => (new HomeController())->index());
  * This shows that not every route needs a controller.
  * The router will echo this HTML directly.
  */
-$router->get('/about', fn() =>
+$router->get(
+  '/about',
+  fn() =>
   '<h1>About</h1><p>This route is handled by a closure.</p>'
 );
 
