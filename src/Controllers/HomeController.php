@@ -17,4 +17,18 @@ class HomeController
     include __DIR__ . '/../Views/home.php';
     return (string) ob_get_clean();
   }
+
+  public function about(): string
+  {
+    ob_start();
+    include __DIR__ . '/../Views/about.php';
+    return (string) ob_get_clean();
+  }
+
+  public function contact(): string
+  {
+    ob_start();
+    include __DIR__ . '/../Views/contact.php';
+    return (string) ob_get_clean();
+  }
 }
