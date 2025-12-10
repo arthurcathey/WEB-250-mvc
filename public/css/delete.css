@@ -1,0 +1,45 @@
+/* Delete Page Styles */
+.delete-form {
+  max-width: 500px;
+}
+
+.warning {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 3px;
+  color: #856404;
+}
+
+.warning strong {
+  color: #856404;
+}
+
+.salamander-info {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 3px;
+}
+
+.salamander-info p {
+  margin-bottom: 10px;
+}
+
+.salamander-info strong {
+  color: #333;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  margin: 0;
+}

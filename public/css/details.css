@@ -1,0 +1,33 @@
+/* Salamander Details Styles */
+.salamander-details {
+  background-color: white;
+  padding: 20px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.salamander-details p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.salamander-details strong {
+  color: #333;
+  display: inline-block;
+  min-width: 100px;
+}
+
+.back-link {
+  margin-top: 20px;
+}
+
+.back-link a {
+  color: #2196F3;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}

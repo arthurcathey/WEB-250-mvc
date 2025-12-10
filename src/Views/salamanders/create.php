@@ -11,58 +11,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Create New Salamander</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    form {
-      max-width: 500px;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-      box-sizing: border-box;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .back-link {
-      margin-top: 15px;
-    }
-
-    .back-link a {
-      color: #666;
-      text-decoration: none;
-    }
-
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/styles.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/navigation.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/forms.css">
 </head>
 
 <body>
@@ -87,7 +38,7 @@
     <label for="description">Description:</label>
     <textarea id="description" name="description" rows="4" required></textarea>
 
-    <button type="submit">Create Salamander</button>
+    <button type="submit" class="btn-success">Create Salamander</button>
   </form>
 
   <div class="back-link">

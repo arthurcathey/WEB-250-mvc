@@ -12,6 +12,9 @@
 <head>
   <meta charset="UTF-8">
   <title><?= htmlspecialchars($salamander['name'] ?? 'Not Found') ?></title>
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/styles.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/navigation.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/details.css">
 </head>
 
 <body>
@@ -24,13 +27,19 @@
     </ul>
   </nav>
   <h1><?= htmlspecialchars($salamander['name'] ?? 'Salamander Not Found') ?></h1>
+
   <?php if ($salamander): ?>
-    <p><strong>Habitat:</strong> <?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
-    <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
+    <div class="salamander-details">
+      <p><strong>Habitat:</strong> <?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
+      <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
+    </div>
   <?php else: ?>
     <p>Sorry, that salamander was not found.</p>
   <?php endif; ?>
-  <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>
+
+  <div class="back-link">
+    <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a></p>
+  </div>
 </body>
 
 </html>

@@ -1,0 +1,99 @@
+/* Salamanders List Styles */
+.create-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.create-btn:hover {
+  background-color: #45a049;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+table thead {
+  background-color: #f2f2f2;
+}
+
+table th {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-weight: bold;
+}
+
+table td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.action-btn {
+  padding: 5px 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  display: inline-block;
+  white-space: nowrap;
+  transition: opacity 0.3s ease;
+  font-size: 14px;
+}
+
+.action-btn:hover {
+  opacity: 0.8;
+  text-decoration: none;
+}
+
+.btn-show {
+  background-color: #4CAF50;
+}
+
+.btn-show:hover {
+  background-color: #45a049;
+}
+
+.btn-edit {
+  background-color: #2196F3;
+}
+
+.btn-edit:hover {
+  background-color: #0b7dda;
+}
+
+.btn-delete {
+  background-color: #f44336;
+}
+
+.btn-delete:hover {
+  background-color: #da190b;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+}

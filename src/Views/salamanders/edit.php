@@ -12,56 +12,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
-
-    form {
-      max-width: 500px;
-    }
-
-    label {
-      display: block;
-      margin-top: 10px;
-      font-weight: bold;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 8px;
-      margin-top: 5px;
-    }
-
-    button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #2196F3;
-      color: white;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #0b7dda;
-    }
-
-    .back-link {
-      margin-top: 15px;
-    }
-
-    .back-link a {
-      color: #666;
-      text-decoration: none;
-    }
-
-    .back-link a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/styles.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/navigation.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/forms.css">
 </head>
 
 <body>
@@ -76,6 +29,7 @@
 
   <?php if ($salamander): ?>
     <h1>Edit <?= htmlspecialchars($salamander['name']) ?></h1>
+
     <form action="/WEB-250-mvc/web250-mvc/public/salamanders/update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" value="<?= htmlspecialchars($salamander['name']) ?>" required>
@@ -86,7 +40,7 @@
       <label for="description">Description:</label>
       <textarea id="description" name="description" rows="4" required><?= htmlspecialchars($salamander['description']) ?></textarea>
 
-      <button type="submit">Update Salamander</button>
+      <button type="submit" class="btn-primary">Update Salamander</button>
     </form>
 
     <div class="back-link">
