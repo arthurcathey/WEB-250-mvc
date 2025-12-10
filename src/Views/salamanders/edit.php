@@ -12,7 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>

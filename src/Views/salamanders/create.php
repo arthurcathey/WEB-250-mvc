@@ -11,7 +11,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Create New Salamander</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>

@@ -9,16 +9,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Contact - Web250 MVC</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="./">Home</a></li>
-      <li><a href="salamanders">Salamanders</a></li>
-      <li><a href="about">About</a></li>
-      <li><a href="contact">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/salamanders">Salamanders</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
 

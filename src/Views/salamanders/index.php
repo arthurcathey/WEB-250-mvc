@@ -12,7 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Salamanders List</title>
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
 <body>
