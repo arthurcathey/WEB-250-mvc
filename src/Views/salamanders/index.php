@@ -9,6 +9,28 @@
   </ul>
 </nav>
 
+<style>
+  .actions-cell {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .action-btn {
+    padding: 5px 10px;
+    color: white;
+    text-decoration: none;
+    border-radius: 3px;
+    display: inline-block;
+    white-space: nowrap;
+  }
+  
+  .btn-show { background-color: #4CAF50; }
+  .btn-edit { background-color: #2196F3; }
+  .btn-delete { background-color: #f44336; }
+</style>
+
 <div style="margin-bottom: 20px;">
   <a href="/WEB-250-mvc/web250-mvc/public/salamanders/create"
     style="padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 3px; font-weight: bold;">
@@ -23,7 +45,7 @@
         <th style="padding: 10px; text-align: left;">Name</th>
         <th style="padding: 10px; text-align: left;">Habitat</th>
         <th style="padding: 10px; text-align: left;">Description</th>
-        <th style="padding: 10px; text-align: center;">Actions</th>
+        <th style="padding: 10px; text-align: center; min-width: 250px;">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -32,20 +54,22 @@
           <td style="padding: 10px;"><?= htmlspecialchars($salamander['name']) ?></td>
           <td style="padding: 10px;"><?= nl2br(htmlspecialchars($salamander['habitat'])) ?></td>
           <td style="padding: 10px;"><?= nl2br(htmlspecialchars($salamander['description'])) ?></td>
-          <td style="padding: 10px; text-align: center;">
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
-              style="padding: 5px 10px; margin: 0 2px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 3px;">
-              Show
-            </a>
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
-              style="padding: 5px 10px; margin: 0 2px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 3px;">
-              Edit
-            </a>
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
-              style="padding: 5px 10px; margin: 0 2px; background-color: #f44336; color: white; text-decoration: none; border-radius: 3px;"
-              onclick="return confirm('Are you sure you want to delete this salamander?');">
-              Delete
-            </a>
+          <td style="padding: 10px;">
+            <div class="actions-cell">
+              <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
+                class="action-btn btn-show">
+                Show
+              </a>
+              <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
+                class="action-btn btn-edit">
+                Edit
+              </a>
+              <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
+                class="action-btn btn-delete"
+                onclick="return confirm('Are you sure you want to delete this salamander?');">
+                Delete
+              </a>
+            </div>
           </td>
         </tr>
       <?php endforeach; ?>
