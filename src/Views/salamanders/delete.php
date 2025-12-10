@@ -18,10 +18,10 @@
 <body>
   <nav>
     <ul>
-      <li><a href="./">Home</a></li>
-      <li><a href="salamanders">Salamanders</a></li>
-      <li><a href="about">About</a></li>
-      <li><a href="contact">Contact</a></li>
+      <li><a href="/">Home</a></li>
+      <li><a href="/salamanders">Salamanders</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -52,19 +52,19 @@
       <form action="/salamanders/destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="delete-form">
         <div class="form-actions">
           <button type="submit" class="btn-danger">Delete Salamander</button>
-          <a href="salamanders" class="btn-secondary">Cancel</a>
+          <a href="/salamanders" class="btn-secondary">Cancel</a>
         </div>
       </form>
     <?php else: ?>
       <div class="error-container">
         <h1>Salamander Not Found</h1>
         <p>Sorry, that salamander does not exist.</p>
-        <a href="salamanders" class="btn-primary">Back to list</a>
+        <a href="/salamanders" class="btn-primary">Back to list</a>
       </div>
     <?php endif; ?>
 
     <div class="back-link">
-      <a href="salamanders">← Back to list</a>
+      <a href="/salamanders">← Back to list</a>
     </div>
   </div>
 </body>
