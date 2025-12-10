@@ -85,5 +85,11 @@ if ($path === '//') {
   $path = '/';
 }
 
+// Error logging for debugging (can remove later)
+error_log("REQUEST_URI: " . ($_SERVER['REQUEST_URI'] ?? 'NOT SET'));
+error_log("SCRIPT_NAME: " . ($_SERVER['SCRIPT_NAME'] ?? 'NOT SET'));
+error_log("Parsed path: " . $path);
+error_log("Method: " . $method);
+
 // ASK THE ROUTER TO HANDLE THE REQUEST
 $router->dispatch($method, $path);
