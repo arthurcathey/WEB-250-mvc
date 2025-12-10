@@ -23,11 +23,32 @@ class Database
     $pass = $config['password'];
     $charset = $config['charset'] ?? 'utf8mb4';
 
+    // Validate configuration
+    if (empty($host) || empty($db) || empty($user)) {
+      throw new Exception(
+        "Database configuration incomplete. Check .env file and ensure DB_HOST, DB_NAME, and DB_USER are set.\n" .
+        "Current: HOST=$host, DB=$db, USER=$user"
+      );
+    }
+
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
     $options = [
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
-    return new PDO($dsn, $user, $pass, $options);
+    
+    try {
+      return new PDO($dsn, $user, $pass, $options);
+    } catch (PDOException $e) {
+      throw new PDOException(
+        "Failed to connect to database.\n" .
+        "Host: $host\n" .
+        "Database: $db\n" .
+        "User: $user\n" .
+        "Error: " . $e->getMessage(),
+        (int)$e->getCode(),
+        $e
+      );
+    }
   }
 }
