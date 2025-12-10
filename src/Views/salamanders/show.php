@@ -39,15 +39,20 @@
           <p><?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
         </div>
       </div>
+      
+      <div class="form-actions" style="margin-top: 20px;">
+        <a href="/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-primary">Edit</a>
+        <a href="/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-danger">Delete</a>
+        <a href="/salamanders" class="btn-secondary">Back to List</a>
+      </div>
     <?php else: ?>
       <div class="error-message">
         <p>Sorry, that salamander was not found.</p>
       </div>
+      <div class="back-link">
+        <a href="/salamanders">← Back to list</a>
+      </div>
     <?php endif; ?>
-
-    <div class="back-link">
-      <a href="/salamanders">← Back to list</a>
-    </div>
   </div>
 </body>
 

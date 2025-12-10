@@ -27,7 +27,7 @@ class Database
     if (empty($host) || empty($db) || empty($user)) {
       throw new Exception(
         "Database configuration incomplete. Check .env file and ensure DB_HOST, DB_NAME, and DB_USER are set.\n" .
-        "Current: HOST=$host, DB=$db, USER=$user"
+          "Current: HOST=$host, DB=$db, USER=$user"
       );
     }
 
@@ -36,16 +36,16 @@ class Database
       PDO::ATTR_ERRMODE            => PDO::ERRMODE_EXCEPTION,
       PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
     ];
-    
+
     try {
       return new PDO($dsn, $user, $pass, $options);
     } catch (PDOException $e) {
       throw new PDOException(
         "Failed to connect to database.\n" .
-        "Host: $host\n" .
-        "Database: $db\n" .
-        "User: $user\n" .
-        "Error: " . $e->getMessage(),
+          "Host: $host\n" .
+          "Database: $db\n" .
+          "User: $user\n" .
+          "Error: " . $e->getMessage(),
         (int)$e->getCode(),
         $e
       );

@@ -48,10 +48,10 @@ echo "<h2>Database Connection Test</h2>";
 try {
   require_once __DIR__ . '/../config/db_credentials.php';
   require_once __DIR__ . '/../src/Database.php';
-  
+
   $pdo = Database::getConnection();
   echo "<p style='color: green;'><strong>✓ Database connection successful!</strong></p>";
-  
+
   // Try to query salamanders
   $stmt = $pdo->query("SELECT COUNT(*) as count FROM salamanders");
   $result = $stmt->fetch();
@@ -60,4 +60,3 @@ try {
   echo "<p style='color: red;'><strong>✗ Database connection failed!</strong></p>";
   echo "<p><strong>Error:</strong> " . htmlspecialchars($e->getMessage()) . "</p>";
 }
-?>

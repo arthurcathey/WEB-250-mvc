@@ -11,7 +11,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Edit <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
+  <title><?php echo isset($salamander['name']) ? 'Edit ' . htmlspecialchars($salamander['name']) : 'Salamander Not Found'; ?></title>
   <link rel="stylesheet" href="/css/main.css">
 </head>
 

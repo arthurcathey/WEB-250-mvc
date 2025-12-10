@@ -83,6 +83,5 @@
     <?php endif; ?>
   </div>
 </body>
-</body>
 
 </html>
