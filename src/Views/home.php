@@ -10,16 +10,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Web250 MVC - Home</title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -27,12 +27,6 @@
 
   <p>This is a PHP MVC application demonstrating routing, controllers, and views.</p>
 
-  <h2>Quick Links</h2>
-  <ul>
-    <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders page</a></li>
-    <li><a href="/WEB-250-mvc/web250-mvc/public/about">About page</a></li>
-    <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact page</a></li>
-  </ul>
 </body>
 
 </html>

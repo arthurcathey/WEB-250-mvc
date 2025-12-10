@@ -9,16 +9,16 @@
 <head>
   <meta charset="UTF-8">
   <title>About - Web250 MVC</title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -38,7 +38,7 @@
   </ul>
 
   <div class="back-link">
-    <p><a href="/WEB-250-mvc/web250-mvc/public/">← Back to home</a></p>
+    <p><a href="./">← Back to home</a></p>
   </div>
 </body>
 

@@ -12,16 +12,16 @@
 <head>
   <meta charset="UTF-8">
   <title>Delete <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -39,21 +39,21 @@
     </div>
 
     <div class="delete-form">
-      <form action="/WEB-250-mvc/web250-mvc/public/salamanders/destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
+      <form action="destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
         <div class="buttons">
           <button type="submit" class="btn-danger">Delete Salamander</button>
-          <a href="/WEB-250-mvc/web250-mvc/public/salamanders"><button type="button" class="btn-secondary">Cancel</button></a>
+          <a href="salamanders"><button type="button" class="btn-secondary">Cancel</button></a>
         </div>
       </form>
     </div>
 
     <div class="back-link">
-      <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a></p>
+      <p><a href="salamanders">← Back to list</a></p>
     </div>
   <?php else: ?>
     <h1>Salamander Not Found</h1>
     <p>Sorry, that salamander does not exist.</p>
-    <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>
+    <p><a href="salamanders">Back to list</a></p>
   <?php endif; ?>
 </body>
 

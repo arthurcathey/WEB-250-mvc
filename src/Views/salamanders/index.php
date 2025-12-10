@@ -12,22 +12,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Salamanders List</title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
   <h1>Salamanders List</h1>
 
-  <a href="/WEB-250-mvc/web250-mvc/public/salamanders/create" class="create-btn">
+  <a href="create" class="create-btn">
     + Create New Salamander
   </a>
 
@@ -49,15 +49,15 @@
             <td><?= nl2br(htmlspecialchars($salamander['description'])) ?></td>
             <td>
               <div class="actions-cell">
-                <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
+                <a href="show?id=<?= htmlspecialchars($salamander['id']) ?>"
                   class="action-btn btn-show">
                   Show
                 </a>
-                <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
+                <a href="edit?id=<?= htmlspecialchars($salamander['id']) ?>"
                   class="action-btn btn-edit">
                   Edit
                 </a>
-                <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
+                <a href="delete?id=<?= htmlspecialchars($salamander['id']) ?>"
                   class="action-btn btn-delete"
                   onclick="return confirm('Are you sure you want to delete this salamander?');">
                   Delete

@@ -11,22 +11,22 @@
 <head>
   <meta charset="UTF-8">
   <title>Create New Salamander</title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
   <h1>Create New Salamander</h1>
 
-  <form action="/WEB-250-mvc/web250-mvc/public/salamanders/store" method="POST">
+  <form action="store" method="POST">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -40,7 +40,7 @@
   </form>
 
   <div class="back-link">
-    <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a></p>
+    <p><a href="salamanders">← Back to list</a></p>
   </div>
 </body>
 

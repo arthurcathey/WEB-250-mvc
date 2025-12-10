@@ -12,23 +12,23 @@
 <head>
   <meta charset="UTF-8">
   <title>Edit <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
-      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
+      <li><a href="./">Home</a></li>
+      <li><a href="salamanders">Salamanders</a></li>
+      <li><a href="about">About</a></li>
+      <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
 
   <?php if ($salamander): ?>
     <h1>Edit <?= htmlspecialchars($salamander['name']) ?></h1>
 
-    <form action="/WEB-250-mvc/web250-mvc/public/salamanders/update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
+    <form action="update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
       <label for="name">Name:</label>
       <input type="text" id="name" name="name" value="<?= htmlspecialchars($salamander['name']) ?>" required>
 
@@ -42,12 +42,12 @@
     </form>
 
     <div class="back-link">
-      <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a></p>
+      <p><a href="salamanders">← Back to list</a></p>
     </div>
   <?php else: ?>
     <h1>Salamander Not Found</h1>
     <p>Sorry, that salamander does not exist.</p>
-    <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>
+    <p><a href="salamanders">Back to list</a></p>
   <?php endif; ?>
 </body>
 
