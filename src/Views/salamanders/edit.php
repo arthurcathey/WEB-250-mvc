@@ -30,7 +30,7 @@
       <h1>Edit <?= htmlspecialchars($salamander['name']) ?></h1>
 
       <div class="form-wrapper">
-        <form action="update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="edit-form">
+        <form action="/salamanders/update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="edit-form">
           <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" value="<?= htmlspecialchars($salamander['name']) ?>" required>

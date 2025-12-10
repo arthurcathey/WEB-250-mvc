@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <form action="destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="delete-form">
+      <form action="/salamanders/destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="delete-form">
         <div class="form-actions">
           <button type="submit" class="btn-danger">Delete Salamander</button>
           <a href="salamanders" class="btn-secondary">Cancel</a>

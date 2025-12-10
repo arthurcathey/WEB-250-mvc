@@ -28,7 +28,7 @@
     <h1>Create New Salamander</h1>
 
     <div class="form-wrapper">
-      <form action="store" method="POST" class="create-form">
+      <form action="/salamanders/store" method="POST" class="create-form">
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Enter salamander name" required>
