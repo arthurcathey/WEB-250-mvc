@@ -18,10 +18,10 @@
 <body>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/salamanders">Salamanders</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -39,18 +39,18 @@
           <p><?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
         </div>
       </div>
-      
+
       <div class="form-actions" style="margin-top: 20px;">
-        <a href="/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-primary">Edit</a>
-        <a href="/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-danger">Delete</a>
-        <a href="/salamanders" class="btn-secondary">Back to List</a>
+        <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-primary">Edit</a>
+        <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>" class="btn-danger">Delete</a>
+        <a href="/WEB-250-mvc/web250-mvc/public/salamanders" class="btn-secondary">Back to List</a>
       </div>
     <?php else: ?>
       <div class="error-message">
         <p>Sorry, that salamander was not found.</p>
       </div>
       <div class="back-link">
-        <a href="/salamanders">← Back to list</a>
+        <a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a>
       </div>
     <?php endif; ?>
   </div>

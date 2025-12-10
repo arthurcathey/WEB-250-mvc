@@ -16,10 +16,10 @@
 <body>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/salamanders">Salamanders</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
     </ul>
   </nav>
 

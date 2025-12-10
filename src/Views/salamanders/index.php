@@ -18,17 +18,17 @@
 <body>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/salamanders">Salamanders</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
     </ul>
   </nav>
 
   <div class="container">
     <div class="list-header">
       <h1>Salamanders List</h1>
-      <a href="/salamanders/create" class="create-btn">
+      <a href="/WEB-250-mvc/web250-mvc/public/salamanders/create" class="create-btn">
         + Create New Salamander
       </a>
     </div>
@@ -52,17 +52,17 @@
                 <td class="description-cell"><?= nl2br(htmlspecialchars($salamander['description'])) ?></td>
                 <td class="actions-cell-td">
                   <div class="actions-cell">
-                    <a href="/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
+                    <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
                       class="action-btn btn-show"
                       title="View details">
                       Show
                     </a>
-                    <a href="/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
+                    <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
                       class="action-btn btn-edit"
                       title="Edit salamander">
                       Edit
                     </a>
-                    <a href="/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
+                    <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
                       class="action-btn btn-delete"
                       title="Delete salamander"
                       onclick="return confirm('Are you sure you want to delete this salamander?');">
@@ -78,7 +78,7 @@
     <?php else: ?>
       <div class="empty-state">
         <p class="no-data">No salamanders found.</p>
-        <p><a href="/salamanders/create" class="btn-primary">Create your first salamander</a></p>
+        <p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/create" class="btn-primary">Create your first salamander</a></p>
       </div>
     <?php endif; ?>
   </div>

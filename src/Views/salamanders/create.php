@@ -17,10 +17,10 @@
 <body>
   <nav>
     <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/salamanders">Salamanders</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/contact">Contact</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/">Home</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Salamanders</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/about">About</a></li>
+      <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -28,7 +28,7 @@
     <h1>Create New Salamander</h1>
 
     <div class="form-wrapper">
-      <form action="/salamanders/store" method="POST" class="create-form">
+      <form action="/WEB-250-mvc/web250-mvc/public/salamanders/store" method="POST" class="create-form">
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Enter salamander name" required>
@@ -46,13 +46,13 @@
 
         <div class="form-actions">
           <button type="submit" class="btn-success">Create Salamander</button>
-          <a href="/salamanders" class="btn-secondary">Cancel</a>
+          <a href="/WEB-250-mvc/web250-mvc/public/salamanders" class="btn-secondary">Cancel</a>
         </div>
       </form>
     </div>
 
     <div class="back-link">
-      <a href="/salamanders">← Back to list</a>
+      <a href="/WEB-250-mvc/web250-mvc/public/salamanders">← Back to list</a>
     </div>
   </div>
 </body>
