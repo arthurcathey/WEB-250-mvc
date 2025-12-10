@@ -104,4 +104,49 @@ class SalamanderController
   {
     require __DIR__ . '/../Views/salamanders/create.php';
   }
+
+  /**
+   * Store a new salamander in the database.
+   * Expects POST data with name, habitat, and description.
+   */
+  public function store(): void
+  {
+    // Validate POST data
+    if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+      http_response_code(405);
+      echo '<h1>405 Method Not Allowed</h1>';
+      echo '<p>This endpoint only accepts POST requests.</p>';
+      return;
+    }
+
+    // Get and validate form data
+    $name = isset($_POST['name']) ? trim($_POST['name']) : '';
+    $habitat = isset($_POST['habitat']) ? trim($_POST['habitat']) : '';
+    $description = isset($_POST['description']) ? trim($_POST['description']) : '';
+
+    // Validate all fields are filled
+    if (empty($name) || empty($habitat) || empty($description)) {
+      http_response_code(400);
+      echo '<h1>400 Bad Request</h1>';
+      echo '<p>All fields are required.</p>';
+      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/create">Back to form</a></p>';
+      return;
+    }
+
+    // Create the salamander
+    $id = Salamander::create($name, $habitat, $description);
+
+    // Check if creation was successful
+    if ($id > 0) {
+      // Redirect to the new salamander's show page
+      header("Location: /WEB-250-mvc/web250-mvc/public/salamanders/show?id=$id");
+      exit;
+    } else {
+      http_response_code(500);
+      echo '<h1>500 Server Error</h1>';
+      echo '<p>Failed to create salamander. Please try again.</p>';
+      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/create">Back to form</a></p>';
+      return;
+    }
+  }
 }

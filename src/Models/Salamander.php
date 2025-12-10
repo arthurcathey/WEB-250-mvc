@@ -29,4 +29,29 @@ class Salamander
     $result = $stmt->fetch();
     return $result ?: null;
   }
+
+  /**
+   * Create a new salamander in the database.
+   * 
+   * @param string $name The salamander name
+   * @param string $habitat The salamander habitat
+   * @param string $description The salamander description
+   * @return int The ID of the newly created salamander, or 0 on failure
+   */
+  public static function create(string $name, string $habitat, string $description): int
+  {
+    try {
+      $pdo = Database::getConnection();
+      $sql = "INSERT INTO salamanders (name, habitat, description) VALUES (:name, :habitat, :description)";
+      $stmt = $pdo->prepare($sql);
+      $stmt->execute([
+        ':name' => $name,
+        ':habitat' => $habitat,
+        ':description' => $description
+      ]);
+      return (int) $pdo->lastInsertId();
+    } catch (Exception $e) {
+      return 0;
+    }
+  }
 }

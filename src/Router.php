@@ -27,6 +27,12 @@ final class Router
     $this->routes['GET'][$path] = $handler;
   }
 
+  /** Register a POST route */
+  public function post(string $path, callable $handler): void
+  {
+    $this->routes['POST'][$path] = $handler;
+  }
+
   /** Dispatch the current request to the right handler */
   public function dispatch(string $method, string $path): void
   {

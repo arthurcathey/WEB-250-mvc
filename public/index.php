@@ -61,6 +61,10 @@ $router->get('/salamanders/create', function () {
   $controller = new SalamanderController();
   $controller->create();
 });
+$router->post('/salamanders/store', function () {
+  $controller = new SalamanderController();
+  $controller->store();
+});
 
 // DETERMINE THE CURRENT REQUEST METHOD AND PATH
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
