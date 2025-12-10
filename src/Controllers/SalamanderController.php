@@ -20,7 +20,7 @@ class SalamanderController
       http_response_code(400);
       echo '<h1>400 Bad Request</h1>';
       echo '<p>Invalid salamander ID.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>';
+      echo '<p><a href="salamanders">Back to list</a></p>';
       return false;
     }
     return true;
@@ -128,7 +128,7 @@ class SalamanderController
       http_response_code(400);
       echo '<h1>400 Bad Request</h1>';
       echo '<p>All fields are required.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/create">Back to form</a></p>';
+      echo '<p><a href="create">Back to form</a></p>';
       return;
     }
 
@@ -138,13 +138,13 @@ class SalamanderController
     // Check if creation was successful
     if ($id > 0) {
       // Redirect to the new salamander's show page
-      header("Location: /WEB-250-mvc/web250-mvc/public/salamanders/show?id=$id");
+      header("Location: show?id=$id");
       exit;
     } else {
       http_response_code(500);
       echo '<h1>500 Server Error</h1>';
       echo '<p>Failed to create salamander. Please try again.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/create">Back to form</a></p>';
+      echo '<p><a href="create">Back to form</a></p>';
       return;
     }
   }
@@ -180,7 +180,7 @@ class SalamanderController
       http_response_code(400);
       echo '<h1>400 Bad Request</h1>';
       echo '<p>All fields are required.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=' . htmlspecialchars($id) . '">Back to form</a></p>';
+      echo '<p><a href="edit?id=' . htmlspecialchars($id) . '">Back to form</a></p>';
       return;
     }
 
@@ -190,13 +190,13 @@ class SalamanderController
     // Check if update was successful
     if ($success) {
       // Redirect to the updated salamander's show page
-      header("Location: /WEB-250-mvc/web250-mvc/public/salamanders/show?id=$id");
+      header("Location: show?id=$id");
       exit;
     } else {
       http_response_code(500);
       echo '<h1>500 Server Error</h1>';
       echo '<p>Failed to update salamander. Please try again.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=' . htmlspecialchars($id) . '">Back to form</a></p>';
+      echo '<p><a href="edit?id=' . htmlspecialchars($id) . '">Back to form</a></p>';
       return;
     }
   }
@@ -228,13 +228,13 @@ class SalamanderController
     // Check if deletion was successful
     if ($success) {
       // Redirect to the salamanders list
-      header("Location: /WEB-250-mvc/web250-mvc/public/salamanders");
+      header("Location: salamanders");
       exit;
     } else {
       http_response_code(500);
       echo '<h1>500 Server Error</h1>';
       echo '<p>Failed to delete salamander. Please try again.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=' . htmlspecialchars($id) . '">Back</a></p>';
+      echo '<p><a href="delete?id=' . htmlspecialchars($id) . '">Back</a></p>';
       return;
     }
   }
