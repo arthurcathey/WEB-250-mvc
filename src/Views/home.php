@@ -10,7 +10,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Web250 MVC - Home</title>
-  <link rel="stylesheet" href="/css/main.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
 </head>
 
 <body>
