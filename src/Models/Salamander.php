@@ -54,4 +54,50 @@ class Salamander
       return 0;
     }
   }
+
+  /**
+   * Update a salamander in the database.
+   * 
+   * @param int $id The salamander ID
+   * @param string $name The salamander name
+   * @param string $habitat The salamander habitat
+   * @param string $description The salamander description
+   * @return bool True if successful, false otherwise
+   */
+  public static function update(int $id, string $name, string $habitat, string $description): bool
+  {
+    try {
+      $pdo = Database::getConnection();
+      $sql = "UPDATE salamanders SET name = :name, habitat = :habitat, description = :description WHERE id = :id";
+      $stmt = $pdo->prepare($sql);
+      $stmt->execute([
+        ':id' => $id,
+        ':name' => $name,
+        ':habitat' => $habitat,
+        ':description' => $description
+      ]);
+      return $stmt->rowCount() > 0;
+    } catch (Exception $e) {
+      return false;
+    }
+  }
+
+  /**
+   * Delete a salamander from the database.
+   * 
+   * @param int $id The salamander ID
+   * @return bool True if successful, false otherwise
+   */
+  public static function delete(int $id): bool
+  {
+    try {
+      $pdo = Database::getConnection();
+      $sql = "DELETE FROM salamanders WHERE id = :id";
+      $stmt = $pdo->prepare($sql);
+      $stmt->execute([':id' => $id]);
+      return $stmt->rowCount() > 0;
+    } catch (Exception $e) {
+      return false;
+    }
+  }
 }

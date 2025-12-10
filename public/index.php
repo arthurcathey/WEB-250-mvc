@@ -65,6 +65,16 @@ $router->post('/salamanders/store', function () {
   $controller = new SalamanderController();
   $controller->store();
 });
+$router->post('/salamanders/update', function () {
+  $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+  $controller = new SalamanderController();
+  $controller->update($id);
+});
+$router->post('/salamanders/destroy', function () {
+  $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
+  $controller = new SalamanderController();
+  $controller->destroy($id);
+});
 
 // DETERMINE THE CURRENT REQUEST METHOD AND PATH
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
