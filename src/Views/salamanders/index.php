@@ -8,6 +8,14 @@
     <li><a href="/WEB-250-mvc/web250-mvc/public/contact">Contact</a></li>
   </ul>
 </nav>
+
+<div style="margin-bottom: 20px;">
+  <a href="/WEB-250-mvc/web250-mvc/public/salamanders/create"
+    style="padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 3px; font-weight: bold;">
+    + Create New Salamander
+  </a>
+</div>
+
 <?php if (!empty($salamanders)): ?>
   <table border="1" style="width: 100%; border-collapse: collapse; margin-top: 20px;">
     <thead>
@@ -25,17 +33,17 @@
           <td style="padding: 10px;"><?= nl2br(htmlspecialchars($salamander['habitat'])) ?></td>
           <td style="padding: 10px;"><?= nl2br(htmlspecialchars($salamander['description'])) ?></td>
           <td style="padding: 10px; text-align: center;">
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>" 
-               style="padding: 5px 10px; margin: 0 2px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 3px;">
+            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/show?id=<?= htmlspecialchars($salamander['id']) ?>"
+              style="padding: 5px 10px; margin: 0 2px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 3px;">
               Show
             </a>
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>" 
-               style="padding: 5px 10px; margin: 0 2px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 3px;">
+            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/edit?id=<?= htmlspecialchars($salamander['id']) ?>"
+              style="padding: 5px 10px; margin: 0 2px; background-color: #2196F3; color: white; text-decoration: none; border-radius: 3px;">
               Edit
             </a>
-            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>" 
-               style="padding: 5px 10px; margin: 0 2px; background-color: #f44336; color: white; text-decoration: none; border-radius: 3px;"
-               onclick="return confirm('Are you sure you want to delete this salamander?');">
+            <a href="/WEB-250-mvc/web250-mvc/public/salamanders/delete?id=<?= htmlspecialchars($salamander['id']) ?>"
+              style="padding: 5px 10px; margin: 0 2px; background-color: #f44336; color: white; text-decoration: none; border-radius: 3px;"
+              onclick="return confirm('Are you sure you want to delete this salamander?');">
               Delete
             </a>
           </td>

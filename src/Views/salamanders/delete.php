@@ -13,19 +13,74 @@
   <meta charset="UTF-8">
   <title>Delete <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    .delete-form { max-width: 500px; }
-    .warning { background-color: #fff3cd; border: 1px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 3px; }
-    .salamander-info { background-color: #f8f9fa; border: 1px solid #dee2e6; padding: 15px; margin: 20px 0; border-radius: 3px; }
-    .buttons { margin-top: 20px; }
-    button { padding: 10px 20px; margin-right: 10px; border: none; border-radius: 3px; cursor: pointer; font-size: 16px; }
-    .delete-btn { background-color: #f44336; color: white; }
-    .delete-btn:hover { background-color: #da190b; }
-    .cancel-btn { background-color: #666; color: white; }
-    .cancel-btn:hover { background-color: #444; }
-    .back-link { margin-top: 15px; }
-    .back-link a { color: #666; text-decoration: none; }
-    .back-link a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    .delete-form {
+      max-width: 500px;
+    }
+
+    .warning {
+      background-color: #fff3cd;
+      border: 1px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 3px;
+    }
+
+    .salamander-info {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      padding: 15px;
+      margin: 20px 0;
+      border-radius: 3px;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .delete-btn {
+      background-color: #f44336;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #da190b;
+    }
+
+    .cancel-btn {
+      background-color: #666;
+      color: white;
+    }
+
+    .cancel-btn:hover {
+      background-color: #444;
+    }
+
+    .back-link {
+      margin-top: 15px;
+    }
+
+    .back-link a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 

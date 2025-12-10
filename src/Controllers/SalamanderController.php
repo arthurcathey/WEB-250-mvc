@@ -96,4 +96,12 @@ class SalamanderController
 
     require __DIR__ . '/../Views/salamanders/delete.php';
   }
+
+  /**
+   * Show form to create a new salamander.
+   */
+  public function create(): void
+  {
+    require __DIR__ . '/../Views/salamanders/create.php';
+  }
 }

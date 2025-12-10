@@ -13,15 +13,54 @@
   <meta charset="UTF-8">
   <title>Edit <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    form { max-width: 500px; }
-    label { display: block; margin-top: 10px; font-weight: bold; }
-    input, textarea { width: 100%; padding: 8px; margin-top: 5px; }
-    button { margin-top: 15px; padding: 10px 20px; background-color: #2196F3; color: white; border: none; border-radius: 3px; cursor: pointer; }
-    button:hover { background-color: #0b7dda; }
-    .back-link { margin-top: 15px; }
-    .back-link a { color: #666; text-decoration: none; }
-    .back-link a:hover { text-decoration: underline; }
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    form {
+      max-width: 500px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0b7dda;
+    }
+
+    .back-link {
+      margin-top: 15px;
+    }
+
+    .back-link a {
+      color: #666;
+      text-decoration: none;
+    }
+
+    .back-link a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 
