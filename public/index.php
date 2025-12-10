@@ -78,9 +78,34 @@ $router->post('/salamanders/destroy', function () {
 
 // DETERMINE THE CURRENT REQUEST METHOD AND PATH
 $method = $_SERVER['REQUEST_METHOD'] ?? 'GET';
+
+// Get the request URI
 $uri = parse_url($_SERVER['REQUEST_URI'] ?? '/', PHP_URL_PATH) ?? '/';
-$base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
-$path = '/' . ltrim(preg_replace('#^' . preg_quote($base, '#') . '#', '', $uri), '/');
+
+// Strategy: Get the directory of index.php and use it as the base
+// SCRIPT_NAME is the path to the current script (/path/to/public/index.php)
+$scriptName = $_SERVER['SCRIPT_NAME'] ?? '/index.php';
+
+// Remove 'index.php' from the end to get the directory
+$scriptDir = dirname($scriptName);
+
+// Normalize the script directory (remove trailing slash if it exists)
+$base = rtrim(str_replace('\\', '/', $scriptDir), '/');
+
+// Remove the base directory from the URI to get only the route path
+// For example: /WEB-250-mvc/web250-mvc/public/salamanders -> /salamanders
+if ($base && $base !== '/' && strpos($uri, $base) === 0) {
+  $path = substr($uri, strlen($base));
+} else {
+  $path = $uri;
+}
+
+// Ensure path starts with /
+if (empty($path) || $path[0] !== '/') {
+  $path = '/' . ltrim($path, '/');
+}
+
+// Handle edge case where path becomes '//'
 if ($path === '//') {
   $path = '/';
 }
