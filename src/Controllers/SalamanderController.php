@@ -8,6 +8,41 @@ require_once __DIR__ . '/../Models/Salamander.php';
 class SalamanderController
 {
   /**
+   * Validate that an ID is numeric and greater than 0.
+   * Returns false and outputs error if invalid.
+   * 
+   * @param int $id The ID to validate
+   * @return bool True if valid, false otherwise
+   */
+  private function validateId(int $id): bool
+  {
+    if (!is_numeric($id) || $id <= 0) {
+      http_response_code(400);
+      echo '<h1>400 Bad Request</h1>';
+      echo '<p>Invalid salamander ID.</p>';
+      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>';
+      return false;
+    }
+    return true;
+  }
+
+  /**
+   * Fetch a salamander by ID and handle not found.
+   * Sets 404 status if not found but doesn't exit.
+   * 
+   * @param int $id The salamander ID
+   * @return array|null The salamander data or null if not found
+   */
+  private function fetchSalamander(int $id): ?array
+  {
+    $salamander = Salamander::find($id);
+    if (!$salamander) {
+      http_response_code(404);
+    }
+    return $salamander;
+  }
+
+  /**
    * Show a list of all salamanders.
    */
   public function index(): void
@@ -23,23 +58,11 @@ class SalamanderController
    */
   public function show(int $id): void
   {
-    // Validate ID: must be numeric and > 0
-    if (!is_numeric($id) || $id <= 0) {
-      http_response_code(400);
-      echo '<h1>400 Bad Request</h1>';
-      echo '<p>Invalid salamander ID.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>';
+    if (!$this->validateId($id)) {
       return;
     }
 
-    // Fetch the salamander
-    $salamander = Salamander::find($id);
-
-    // Handle not found
-    if (!$salamander) {
-      http_response_code(404);
-    }
-
+    $salamander = $this->fetchSalamander($id);
     require __DIR__ . '/../Views/salamanders/show.php';
   }
 
@@ -50,23 +73,11 @@ class SalamanderController
    */
   public function edit(int $id): void
   {
-    // Validate ID: must be numeric and > 0
-    if (!is_numeric($id) || $id <= 0) {
-      http_response_code(400);
-      echo '<h1>400 Bad Request</h1>';
-      echo '<p>Invalid salamander ID.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>';
+    if (!$this->validateId($id)) {
       return;
     }
 
-    // Fetch the salamander
-    $salamander = Salamander::find($id);
-
-    // Handle not found
-    if (!$salamander) {
-      http_response_code(404);
-    }
-
+    $salamander = $this->fetchSalamander($id);
     require __DIR__ . '/../Views/salamanders/edit.php';
   }
 
@@ -77,23 +88,11 @@ class SalamanderController
    */
   public function delete(int $id): void
   {
-    // Validate ID: must be numeric and > 0
-    if (!is_numeric($id) || $id <= 0) {
-      http_response_code(400);
-      echo '<h1>400 Bad Request</h1>';
-      echo '<p>Invalid salamander ID.</p>';
-      echo '<p><a href="/WEB-250-mvc/web250-mvc/public/salamanders">Back to list</a></p>';
+    if (!$this->validateId($id)) {
       return;
     }
 
-    // Fetch the salamander
-    $salamander = Salamander::find($id);
-
-    // Handle not found
-    if (!$salamander) {
-      http_response_code(404);
-    }
-
+    $salamander = $this->fetchSalamander($id);
     require __DIR__ . '/../Views/salamanders/delete.php';
   }
 
