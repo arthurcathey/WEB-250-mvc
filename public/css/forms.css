@@ -33,7 +33,7 @@ textarea {
 input:focus,
 textarea:focus {
   outline: none;
-  border-color: #2196F3;
+  border-color: #2196f3;
   box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
 }
 
@@ -59,7 +59,7 @@ button:hover {
 
 /* Specific button styles */
 .btn-primary {
-  background-color: #2196F3;
+  background-color: #2196f3;
   color: white;
 }
 
@@ -68,7 +68,7 @@ button:hover {
 }
 
 .btn-success {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 

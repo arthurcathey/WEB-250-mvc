@@ -12,10 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Delete <?= htmlspecialchars($salamander['name'] ?? 'Salamander') ?></title>
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/styles.css">
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/navigation.css">
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/forms.css">
-  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/delete.css">
+  <link rel="stylesheet" href="/WEB-250-mvc/web250-mvc/public/css/main.css">
 </head>
 
 <body>

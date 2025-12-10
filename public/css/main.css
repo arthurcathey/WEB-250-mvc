@@ -1,0 +1,7 @@
+/* Main stylesheet - imports all component styles */
+@import url('styles.css');
+@import url('navigation.css');
+@import url('salamanders-list.css');
+@import url('forms.css');
+@import url('details.css');
+@import url('delete.css');
