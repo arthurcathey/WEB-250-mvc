@@ -1,45 +1,73 @@
 /* Delete Page Styles */
 .delete-form {
-  max-width: 500px;
+  max-width: 600px;
 }
 
 .warning {
   background-color: #fff3cd;
-  border: 1px solid #ffc107;
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 3px;
+  border: 2px solid #ffc107;
+  padding: 18px;
+  margin: 25px 0;
+  border-radius: 5px;
   color: #856404;
+  font-weight: 500;
 }
 
 .warning strong {
   color: #856404;
+  font-weight: bold;
 }
 
 .salamander-info {
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
-  padding: 15px;
-  margin: 20px 0;
-  border-radius: 3px;
+  padding: 25px;
+  margin: 25px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.salamander-info p {
-  margin-bottom: 10px;
+.salamander-info h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 18px;
+}
+
+.salamander-info .detail-field {
+  margin-bottom: 18px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.salamander-info .detail-field:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .salamander-info strong {
   color: #333;
-  display: inline-block;
-  min-width: 100px;
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
 }
 
-.buttons {
-  margin-top: 20px;
+.salamander-info p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.form-actions {
+  margin-top: 25px;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
-.buttons button {
+.form-actions button,
+.form-actions a {
   margin: 0;
 }
+

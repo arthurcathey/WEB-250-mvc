@@ -25,30 +25,45 @@
     </ul>
   </nav>
 
-  <?php if ($salamander): ?>
-    <h1>Edit <?= htmlspecialchars($salamander['name']) ?></h1>
+  <div class="container">
+    <?php if ($salamander): ?>
+      <h1>Edit <?= htmlspecialchars($salamander['name']) ?></h1>
 
-    <form action="update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" value="<?= htmlspecialchars($salamander['name']) ?>" required>
+      <div class="form-wrapper">
+        <form action="update?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="edit-form">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="<?= htmlspecialchars($salamander['name']) ?>" required>
+          </div>
 
-      <label for="habitat">Habitat:</label>
-      <textarea id="habitat" name="habitat" rows="4" required><?= htmlspecialchars($salamander['habitat']) ?></textarea>
+          <div class="form-group">
+            <label for="habitat">Habitat:</label>
+            <textarea id="habitat" name="habitat" rows="4" required><?= htmlspecialchars($salamander['habitat']) ?></textarea>
+          </div>
 
-      <label for="description">Description:</label>
-      <textarea id="description" name="description" rows="4" required><?= htmlspecialchars($salamander['description']) ?></textarea>
+          <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea id="description" name="description" rows="4" required><?= htmlspecialchars($salamander['description']) ?></textarea>
+          </div>
 
-      <button type="submit" class="btn-primary">Update Salamander</button>
-    </form>
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Update Salamander</button>
+            <a href="salamanders" class="btn-secondary">Cancel</a>
+          </div>
+        </form>
+      </div>
 
-    <div class="back-link">
-      <p><a href="salamanders">← Back to list</a></p>
-    </div>
-  <?php else: ?>
-    <h1>Salamander Not Found</h1>
-    <p>Sorry, that salamander does not exist.</p>
-    <p><a href="salamanders">Back to list</a></p>
-  <?php endif; ?>
+      <div class="back-link">
+        <a href="salamanders">← Back to list</a>
+      </div>
+    <?php else: ?>
+      <div class="error-container">
+        <h1>Salamander Not Found</h1>
+        <p>Sorry, that salamander does not exist.</p>
+        <a href="salamanders" class="btn-primary">Back to list</a>
+      </div>
+    <?php endif; ?>
+  </div>
 </body>
 
 </html>

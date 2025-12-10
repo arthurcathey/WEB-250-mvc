@@ -1,33 +1,42 @@
 /* Form Styles */
+.form-wrapper {
+  margin-bottom: 30px;
+}
+
 form {
-  max-width: 500px;
+  max-width: 600px;
   background-color: white;
-  padding: 20px;
-  border-radius: 3px;
+  padding: 25px;
+  border-radius: 5px;
   border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group:last-of-type {
+  margin-bottom: 0;
 }
 
 label {
   display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   font-weight: bold;
   color: #333;
-}
-
-label:first-of-type {
-  margin-top: 0;
+  font-size: 15px;
 }
 
 input,
 textarea {
   width: 100%;
-  padding: 8px 12px;
-  margin-bottom: 10px;
+  padding: 10px 12px;
   border: 1px solid #ddd;
-  border-radius: 3px;
+  border-radius: 4px;
   font-family: Arial, sans-serif;
   font-size: 14px;
+  box-sizing: border-box;
 }
 
 input:focus,
@@ -37,20 +46,31 @@ textarea:focus {
   box-shadow: 0 0 5px rgba(33, 150, 243, 0.3);
 }
 
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+}
+
 textarea {
   resize: vertical;
   min-height: 100px;
 }
 
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 25px;
+  align-items: center;
+}
+
 button {
   padding: 10px 20px;
-  margin-top: 15px;
   border: none;
-  border-radius: 3px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 14px;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 
 button:hover {
@@ -61,10 +81,16 @@ button:hover {
 .btn-primary {
   background-color: #2196f3;
   color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
   background-color: #0b7dda;
+  text-decoration: none;
 }
 
 .btn-success {
@@ -86,10 +112,16 @@ button:hover {
 }
 
 .btn-secondary {
-  background-color: #666;
+  background-color: #6c757d;
   color: white;
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #444;
+  background-color: #5a6268;
+  text-decoration: none;
 }

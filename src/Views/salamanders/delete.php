@@ -25,36 +25,49 @@
     </ul>
   </nav>
 
-  <?php if ($salamander): ?>
-    <h1>Delete <?= htmlspecialchars($salamander['name']) ?></h1>
+  <div class="container">
+    <h1>Delete Salamander</h1>
 
-    <div class="warning">
-      <strong>⚠️ Warning:</strong> This action cannot be undone. Are you sure you want to delete this salamander?
-    </div>
+    <?php if ($salamander): ?>
+      <div class="warning">
+        <strong>⚠️ Warning!</strong> You are about to permanently delete this salamander record. This action cannot be undone.
+      </div>
 
-    <div class="salamander-info">
-      <p><strong>Name:</strong> <?= htmlspecialchars($salamander['name']) ?></p>
-      <p><strong>Habitat:</strong> <?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
-      <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
-    </div>
+      <div class="salamander-info">
+        <h3>Salamander Details</h3>
+        <div class="detail-field">
+          <strong>Name:</strong>
+          <p><?= htmlspecialchars($salamander['name']) ?></p>
+        </div>
+        <div class="detail-field">
+          <strong>Habitat:</strong>
+          <p><?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
+        </div>
+        <div class="detail-field">
+          <strong>Description:</strong>
+          <p><?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
+        </div>
+      </div>
 
-    <div class="delete-form">
-      <form action="destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST">
-        <div class="buttons">
+      <form action="destroy?id=<?= htmlspecialchars($salamander['id']) ?>" method="POST" class="delete-form">
+        <div class="form-actions">
           <button type="submit" class="btn-danger">Delete Salamander</button>
-          <a href="salamanders"><button type="button" class="btn-secondary">Cancel</button></a>
+          <a href="salamanders" class="btn-secondary">Cancel</a>
         </div>
       </form>
-    </div>
+    <?php else: ?>
+      <div class="error-container">
+        <h1>Salamander Not Found</h1>
+        <p>Sorry, that salamander does not exist.</p>
+        <a href="salamanders" class="btn-primary">Back to list</a>
+      </div>
+    <?php endif; ?>
 
     <div class="back-link">
-      <p><a href="salamanders">← Back to list</a></p>
+      <a href="salamanders">← Back to list</a>
     </div>
-  <?php else: ?>
-    <h1>Salamander Not Found</h1>
-    <p>Sorry, that salamander does not exist.</p>
-    <p><a href="salamanders">Back to list</a></p>
-  <?php endif; ?>
+  </div>
+</body>
 </body>
 
 </html>

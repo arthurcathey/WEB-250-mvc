@@ -24,19 +24,30 @@
       <li><a href="contact">Contact</a></li>
     </ul>
   </nav>
-  <h1><?= htmlspecialchars($salamander['name'] ?? 'Salamander Not Found') ?></h1>
 
-  <?php if ($salamander): ?>
-    <div class="salamander-details">
-      <p><strong>Habitat:</strong> <?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
-      <p><strong>Description:</strong> <?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
+  <div class="container">
+    <h1><?= htmlspecialchars($salamander['name'] ?? 'Salamander Not Found') ?></h1>
+
+    <?php if ($salamander): ?>
+      <div class="salamander-details">
+        <div class="detail-field">
+          <strong>Habitat:</strong>
+          <p><?= nl2br(htmlspecialchars($salamander['habitat'])) ?></p>
+        </div>
+        <div class="detail-field">
+          <strong>Description:</strong>
+          <p><?= nl2br(htmlspecialchars($salamander['description'])) ?></p>
+        </div>
+      </div>
+    <?php else: ?>
+      <div class="error-message">
+        <p>Sorry, that salamander was not found.</p>
+      </div>
+    <?php endif; ?>
+
+    <div class="back-link">
+      <a href="salamanders">← Back to list</a>
     </div>
-  <?php else: ?>
-    <p>Sorry, that salamander was not found.</p>
-  <?php endif; ?>
-
-  <div class="back-link">
-    <p><a href="salamanders">← Back to list</a></p>
   </div>
 </body>
 
