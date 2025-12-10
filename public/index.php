@@ -22,6 +22,11 @@ if (file_exists($envFile)) {
       list($name, $value) = explode('=', $line, 2);
       $name = trim($name);
       $value = trim($value);
+      // Remove quotes if present
+      if ((strpos($value, '"') === 0 && strrpos($value, '"') === strlen($value) - 1) ||
+          (strpos($value, "'") === 0 && strrpos($value, "'") === strlen($value) - 1)) {
+        $value = substr($value, 1, -1);
+      }
       $_ENV[$name] = $value;
       $_SERVER[$name] = $value;
       putenv("$name=$value");
